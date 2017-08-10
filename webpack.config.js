@@ -1,6 +1,7 @@
 'use strict';
 'use strict';
 module.exports = {
+    devtool: 'inline-source-map',
     entry: "./src/index.ts",
     output: {
         filename: "index.js",
@@ -12,10 +13,8 @@ module.exports = {
 
     module: {
         rules: [
-            { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
-            { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
+            {test: /\.tsx?$/, loader: "awesome-typescript-loader"},
+            {enforce: "pre", test: /\.js$/, loader: "source-map-loader"}
         ]
-    },
-
-    devtool: 'source-map'
+    }
 };
