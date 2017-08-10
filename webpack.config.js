@@ -1,6 +1,10 @@
 'use strict';
-'use strict';
 module.exports = {
+    node: {
+        fs: "empty",
+        child_process: "empty"
+    },
+    // target: 'node',
     devtool: 'inline-source-map',
     entry: "./src/index.ts",
     output: {
