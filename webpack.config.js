@@ -1,6 +1,6 @@
 'use strict';
 
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     node: {
@@ -24,11 +24,11 @@ module.exports = {
             {enforce: "pre", test: /\.js$/, loader: "source-map-loader"}
         ]
     },
-    // plugins: [
-    //     new HtmlWebpackPlugin({
-    //         cache: true,
-    //         showErrors: true,
-    //         title: "Mocha Browser Tests",
-    //     }),
-    // ]
+    plugins: [
+        new HtmlWebpackPlugin({
+            cache: true,
+            showErrors: true,
+            title: "Mocha Browser Tests",
+        }),
+    ]
 };
