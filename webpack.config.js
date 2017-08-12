@@ -1,5 +1,6 @@
 'use strict';
 
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -11,8 +12,8 @@ module.exports = {
     devtool: 'inline-source-map',
     entry: "./src/index.ts",
     output: {
-        filename: "index.js",
-        path: __dirname + "/dist"
+        path: path.join(__dirname, 'dist'),
+        filename: '[name].[chunkhash].js'
     },
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".json"]
