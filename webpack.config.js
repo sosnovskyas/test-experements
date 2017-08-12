@@ -19,6 +19,9 @@ module.exports = {
     },
 
     module: {
+        // todo: fix - it OLD method, can be bugs
+        // fix trouble https://github.com/AngularClass/angular-starter/issues/993
+        exprContextCritical: false,
         rules: [
             {test: /\.tsx?$/, loader: "awesome-typescript-loader"},
             {enforce: "pre", test: /\.js$/, loader: "source-map-loader"}
@@ -27,8 +30,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             cache: true,
-            showErrors: true,
-            title: "Mocha Browser Tests",
-        }),
+            showErrors: true
+        })
     ]
 };
