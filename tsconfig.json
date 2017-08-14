@@ -8,7 +8,9 @@
     ],
     "module": "commonjs",
     "target": "es5",
-    "sourceMap": true
+    "sourceMap": true,
+    "jsx": "react",
+    "noImplicitAny": true
   },
   "exclude": [
     "node_modules"
