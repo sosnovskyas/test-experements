@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack",
+    "build": "NODE_ENV=production webpack"
   },
   "author": "Sosnovsky Alexey <sosnovsky.as@gmail.com>",
   "license": "GPL-3.0",
@@ -12,8 +14,11 @@
     "@types/chai": "4.0.2",
     "@types/karma": "0.13.36",
     "@types/mocha": "2.2.41",
+    "autoprefixer": "7.1.2",
     "awesome-typescript-loader": "3.2.2",
     "chai": "4.1.1",
+    "compression-webpack-plugin": "1.0.0",
+    "extract-text-webpack-plugin": "3.0.0",
     "html-webpack-plugin": "2.30.1",
     "karma": "1.7.0",
     "karma-chai": "0.1.0",
@@ -21,7 +26,10 @@
     "karma-phantomjs-launcher": "1.0.4",
     "karma-webpack": "2.0.4",
     "mocha": "3.5.0",
+    "preload-webpack-plugin": "1.2.3",
+    "script-ext-html-webpack-plugin": "1.8.5",
     "source-map-loader": "0.2.1",
+    "style-ext-html-webpack-plugin": "3.4.1",
     "typescript": "2.4.2",
     "webpack": "3.5.3"
   }
