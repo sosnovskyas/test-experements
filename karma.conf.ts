@@ -1,7 +1,8 @@
 const karmaMocha = require('karma-mocha');
 const karmaWebpack = require('karma-webpack');
 const karmaPhantomjs = require('karma-phantomjs-launcher');
-const webpackConfig = require('./webpack.config');
+// important! dont use CommonsChunkPlugin webpack plugin in test build
+const webpackConfig = require('./webpack.test.config.js');
 
 module.exports = (config) => {
     config.set({
@@ -45,7 +46,8 @@ module.exports = (config) => {
 
         // Continuous Integration mode
         // if true, Karma captures browsers, runs the tests and exits
-        singleRun: false,
+        // singleRun: false,
+        singleRun: true,
 
         // Concurrency level
         // how many browser should be started simultaneous
