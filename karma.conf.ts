@@ -23,11 +23,13 @@ module.exports = (config) => {
 
         // list of files / patterns to load in the browser
         files: [
-            'src/**/*.test.ts'
+            'src/**/*.test.ts',
+            'src/**/*.test.tsx',
         ],
         preprocessors: {
             // 'src/**/*.test.ts': ['webpack', 'sourcemap']
-            'src/**/*.test.ts': ['webpack']
+            'src/**/*.test.ts': ['webpack'],
+            'src/**/*.test.tsx': ['webpack']
         },
         webpack: webpackConfig,
 
