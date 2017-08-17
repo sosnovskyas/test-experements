@@ -4,7 +4,6 @@ const isProd = process.env.NODE_ENV === 'production';
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const staticSourcePath = path.join(__dirname, 'static');
 const sourcePath = path.join(__dirname, 'src');
 const buildPath = path.join(__dirname, 'dist');
 
@@ -39,14 +38,12 @@ let plugins = [
                     ]
                 })
             ],
-            // context: staticSourcePath
         }
     }),
     new webpack.HashedModuleIdsPlugin(),
 
 
     new HtmlWebpackPlugin({
-        // template: path.join(__dirname, 'index.ejs'),
         path: buildPath,
         // excludeChunks: ['base'],
         filename: 'index.html',
@@ -129,7 +126,6 @@ module.exports = {
     output: {
         path: buildPath,
         filename: '[name].[chunkhash].js'
-        // publicPath: '/'
     },
 
     resolve: {
