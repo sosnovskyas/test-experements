@@ -16,7 +16,7 @@ const autoprefixer = require('autoprefixer');
 module.exports = {
     node: {
         fs: "empty",
-    //     child_process: "empty"
+        child_process: "empty"
     },
 
     entry: {
@@ -26,7 +26,6 @@ module.exports = {
     output: {
         path: buildPath,
         filename: '[name].[chunkhash].js'
-        // publicPath: '/'
     },
 
     resolve: {
@@ -62,16 +61,13 @@ module.exports = {
                         ]
                     })
                 ],
-                // context: staticSourcePath
             }
         }),
         new webpack.HashedModuleIdsPlugin(),
 
 
         new HtmlWebpackPlugin({
-            // template: path.join(__dirname, 'index.ejs'),
             path: buildPath,
-            // excludeChunks: ['base'],
             filename: 'index.html',
             minify: {
                 collapseWhitespace: true,
